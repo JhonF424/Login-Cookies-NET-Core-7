@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Code\\LoginProject\\LoginProject\\LoginProject.csproj": {}
+    "D:\\Code\\CSharp\\LoginProject\\LoginProject\\LoginProject.csproj": {}
   },
   "projects": {
-    "D:\\Code\\LoginProject\\LoginProject\\LoginProject.csproj": {
+    "D:\\Code\\CSharp\\LoginProject\\LoginProject\\LoginProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Code\\LoginProject\\LoginProject\\LoginProject.csproj",
+        "projectUniqueName": "D:\\Code\\CSharp\\LoginProject\\LoginProject\\LoginProject.csproj",
         "projectName": "LoginProject",
-        "projectPath": "D:\\Code\\LoginProject\\LoginProject\\LoginProject.csproj",
+        "projectPath": "D:\\Code\\CSharp\\LoginProject\\LoginProject\\LoginProject.csproj",
         "packagesPath": "C:\\Users\\Jinzo\\.nuget\\packages\\",
-        "outputPath": "D:\\Code\\LoginProject\\LoginProject\\obj\\",
+        "outputPath": "D:\\Code\\CSharp\\LoginProject\\LoginProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jinzo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -49,6 +49,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.2, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.3, )"
             }
           },
           "imports": [

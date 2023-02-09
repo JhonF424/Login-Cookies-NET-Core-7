@@ -1,8 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using LoginProject.Models;
-using System.Data.SqlTypes;
 using LoginProject.Services.Contract;
 using LoginProject.Services.Implementation;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Mvc;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +18,11 @@ builder.Services.AddDbContext<LogindbContext>(options =>
 
 builder.Services.AddScoped<IUserService, UserService>();
 
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(opts =>
+{
+    opts.LoginPath = "/Start/Login";
+    opts.ExpireTimeSpan= TimeSpan.FromMinutes(30);
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -27,10 +34,11 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Start}/{action=Login}/{id?}");
 
 app.Run();
